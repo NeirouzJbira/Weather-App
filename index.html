@@ -1,90 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local Weather</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="css/style.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="d-flex flex-column h-100">
-       <div id="main" class="container">
-            <div class="row">
-                <div id="currentWeather" class="col-sm">
-                    <div class="row col d-md-inline-block"><h1 id="location"></h1></div>
-                    <div class="row col d-md-inline-block" id="date"><p></p></div>
-                    <div class="row col d-md-inline-block"><canvas class="icon" width="140" height="140"></canvas></div>
-                    <div class="row col d-md-inline-block" id="description"><p></p></div>
-                </div>
-                <div class="col-sm">
-                    <div class="row col d-flex flex-row flex-nowrap" id="currentTempSection">
-                        <h2 id="degree"></h2>
-                        <span id="fahrenheit">F</span>
-                        <p id="slash">/</p>
-                        <span id="celsius">C</span>
-                    </div>
-                    <div id="conditions" class="col-md">
-                        <div class="row flex-nowrap">
-                            <div id="humidity" class="col-md">Humidity:</div>
-                            <div id="wind" class="col-md">Wind:</div>
-                        </div>
-                        <div class="row flex-nowrap">
-                            <div id="precipitation" class="col-md">Precipitation:</div>
-                            <div id="pressure" class="col-md">Pressure:</div>
-                        </div>
-                    </div>
-                </div>
+      <div id="main" class="container">
+        <div class="row">
+          <div id="currentWeather" class="col-sm">
+            <div class="row col d-md-inline-block"><h1 id="location"></h1></div>
+            <div class="row col d-md-inline-block" id="date"><p></p></div>
+            <div class="row col d-md-inline-block">
+              <canvas class="icon" width="140" height="140"></canvas>
             </div>
-            <div class="row">
-                <div id="forecast" class="col-md">
-                    <!-- Nav Tabs -->
-                    <ul class="nav nav-tabs nav-justified" id="forecastTab">
-                        <!-- <li class="nav-item">
-                            <a href="#minutely" class="nav-link active" data-toggle="tab">Minutely</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#hourly" class="nav-link" data-toggle="tab">Hourly</a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a href="#weekly" class="nav-link"><strong>Weekly Forecast</strong></a>
-                        </li>
-                    </ul>
-
-                    <!-- Tab Panes -->
-                    <div class="tab-content">
-                        <!-- <div class="tab-pane container fade" id="hourly">
-                            <table id="hourlyForecast" width=100%>
-
-                            </table>
-                        </div> -->
-                        <div class="tab-pane container active" id="weekly">
-                            <table id="weeklyForecast" width=100%>
-                                
-                            </table>
-                        </div>
-                    </div>
-                </div>
+            <div class="row col d-md-inline-block" id="description">
+              <p></p>
             </div>
+          </div>
+          <div class="col-sm">
+            <div
+              class="row col d-flex flex-row flex-nowrap"
+              id="currentTempSection"
+            >
+              <h2 id="degree"></h2>
+              <span id="fahrenheit">F</span>
+              <p id="slash">/</p>
+              <span id="celsius">C</span>
+            </div>
+            <div id="conditions" class="col-md">
+              <div class="row flex-nowrap">
+                <div id="humidity" class="col-md">Humidity:</div>
+                <div id="wind" class="col-md">Wind:</div>
+              </div>
+              <div class="row flex-nowrap">
+                <div id="precipitation" class="col-md">Precipitation:</div>
+                <div id="pressure" class="col-md">Pressure:</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="container" id="footer">
-            <div class="row">
-                <div class="col text-center">
-                    <a href="https://darksky.net/dev" target="_blank">Powered by Dark Sky API</a>
-                    <br>
-                    <a href="https://github.com/toowee-le" target="_blank">Neirouz</a>
-                </div>
+        <div class="row">
+          <div id="forecast" class="col-md">
+            <!-- Nav Tabs -->
+            <ul class="nav nav-tabs nav-justified" id="forecastTab">
+              <li class="nav-item">
+                <a href="#weekly" class="nav-link"
+                  ><strong>Weekly Forecast</strong></a
+                >
+              </li>
+            </ul>
+
+            <!-- Tab Panes -->
+            <div class="tab-content">
+              <div class="tab-pane container active" id="weekly">
+                <table id="weeklyForecast" width="100%"></table>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+      <div class="container" id="footer">
+        <div class="row">
+          <div class="col text-center">
+            <a href="https://darksky.net/dev" target="_blank"
+              >Powered by Dark Sky API</a
+            >
+            <br />
+            <a href="https://github.com/NeirouzJbira" target="_blank"
+              >Neirouz</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
     <script src="app.js"></script>
     <script src="skycons.js"></script>
     <!-- Optional JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
