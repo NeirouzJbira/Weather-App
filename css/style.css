@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+:root {
+  --main-color: #fff;
+  --secondary-color: #32376f;
+  --light-white: #f2f2f2;
+}
+
+body,
+html {
+  height: 100%;
+  background: linear-gradient(rgb(119, 149, 199), rgb(236, 197, 190));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--main-color);
+  font-family: "Lato", "Helvetica", sans-serif;
+}
+
+#main {
+  border-radius: 12px;
+  padding: 2em;
+  border: 1px solid #fff;
+}
+
+/*------------
+Typography
+------------*/
+
+#location {
+  font-size: 3.2rem;
+}
+
+#degree {
+  font-size: 10rem;
+}
+
+span,
+#slash {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+  padding-right: 3px;
+}
+
+span:hover {
+  font-weight: 800;
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+#description {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+/*------------
+Weather forecast
+------------*/
+
+#forecastTab {
+  padding-top: 1em;
+}
+
+#forecastTab li a {
+  color: var(--main-color);
+}
+
+#forecastTab li a:hover {
+  background: none;
+  border-color: transparent;
+}
+
+/*------------
+Footer
+------------*/
+
+#footer {
+  margin-bottom: 2em;
+}
+
+#footer a {
+  color: var(--light-white);
+  font-size: 0.8rem;
+}
+
+/*------------
+Media queries
+------------*/
+
+@media (min-width: 576px) {
+  #main {
+    margin-top: 70px;
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 875px) {
+  h2 {
+    font-size: 8em;
+  }
+
+  #forecast {
+    margin: 2em 0 0;
+  }
+}
+
+/* Small Devices */
+@media (max-width: 576px) {
+  #main {
+    border: 0;
+  }
+}
